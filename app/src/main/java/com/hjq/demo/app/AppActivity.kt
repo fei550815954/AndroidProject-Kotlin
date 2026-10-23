@@ -231,7 +231,7 @@ abstract class AppActivity : BaseActivity(), TitleBarAction, ImmersionAction, On
      */
     override fun setTitle(title: CharSequence?) {
         super<BaseActivity>.setTitle(title)
-        acquireTitleBar()?.title = title
+        acquireTitleBar()?.setTitle(title)
     }
 
     override fun acquireTitleBar(): TitleBar? {

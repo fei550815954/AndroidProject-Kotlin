@@ -33,7 +33,7 @@ interface TitleBarAction : OnTitleBarListener {
      */
     fun setTitle(title: CharSequence?) {
         val titleBar = this@TitleBarAction.acquireTitleBar() ?: return
-        titleBar.title = title
+        titleBar.setTitle(title)
     }
 
     /**
@@ -46,7 +46,7 @@ interface TitleBarAction : OnTitleBarListener {
 
     fun setLeftTitle(text: CharSequence?) {
         val titleBar = this@TitleBarAction.acquireTitleBar() ?: return
-        titleBar.leftTitle = text
+        titleBar.setLeftTitle(text)
     }
 
     fun getLeftTitle(): CharSequence? {
@@ -64,7 +64,7 @@ interface TitleBarAction : OnTitleBarListener {
 
     fun setRightTitle(text: CharSequence?) {
         val titleBar = this@TitleBarAction.acquireTitleBar() ?: return
-        titleBar.rightTitle = text
+        titleBar.setRightTitle(text)
     }
 
     fun getRightTitle(): CharSequence? {

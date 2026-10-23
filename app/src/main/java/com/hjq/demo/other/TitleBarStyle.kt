@@ -1,12 +1,12 @@
 package com.hjq.demo.other
 
 import android.content.Context
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toDrawable
 import com.hjq.bar.style.LightBarStyle
 import com.hjq.custom.widget.view.PressAlphaTextView
 import com.hjq.demo.R
@@ -33,8 +33,8 @@ class TitleBarStyle : LightBarStyle() {
         return PressAlphaTextView(context)
     }
 
-    override fun getTitleBarBackground(context: Context): Drawable {
-        return ColorDrawable(ContextCompat.getColor(context, R.color.common_primary_color))
+    override fun getTitleBarBackground(context: Context): Drawable? {
+        return ContextCompat.getColor(context, R.color.common_primary_color).toDrawable()
     }
 
     override fun getBackButtonDrawable(context: Context): Drawable? {
